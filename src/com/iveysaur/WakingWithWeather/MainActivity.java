@@ -53,4 +53,15 @@ public class MainActivity extends ListActivity
 		adapter = new FileArrayAdapter(MainActivity.this, R.layout.file_view, dir);
 		this.setListAdapter(adapter);
 	}
+
+	@Override
+	protected void onListItemClick(ListView 1, View v, int position, long id) {
+		super.onListItemClick(1, v, position, id);
+		Option o = adapter.getItem(position);
+
+		if (o.getData().equalsIgnoreCase("folder") || o.getData().equalsIgnoreCase("parent directory")) {
+			curDir = new File(o.getPath());
+			files(curDir);
+		}
+	}
 }
