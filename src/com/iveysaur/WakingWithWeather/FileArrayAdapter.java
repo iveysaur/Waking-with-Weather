@@ -1,5 +1,14 @@
 package com.iveysaur.WakingWithWeather;
 
+import java.util.List;
+
+import android.content.Context;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.ArrayAdapter;
+import android.widget.TextView;
+
 public class FileArrayAdapter extends ArrayAdapter<Option> {
 	private Context c;
 	private int id;
@@ -28,8 +37,8 @@ public class FileArrayAdapter extends ArrayAdapter<Option> {
 		final Option o = items.get(position);
 
 		if (o != null) {
-			TextView t1 = (Textview) v.findViewById(R.id.TextView01);
-			TextView t2 = (Textview) v.findViewById(R.id.TextView02);
+			TextView t1 = (TextView) v.findViewById(R.id.TextView01);
+			TextView t2 = (TextView) v.findViewById(R.id.TextView02);
 			if (t1 != null) {
 				t1.setText(o.getName());
 			}

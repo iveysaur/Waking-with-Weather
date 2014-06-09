@@ -23,7 +23,8 @@ public class Option implements Comparable<Option> {
 		return path;
 	}
 
-	@Overridepublic int compareTo(Option o) {
+	@Override
+	public int compareTo(Option o) {
 		if (this.name != null) {
 			return this.name.toLowerCase().compareTo(o.getName().toLowerCase());
 		} else {

@@ -5,10 +5,13 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
-import android.app.Activity;
+import android.app.ListActivity;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.ListView;
+import android.widget.Toast;
 
-public class MainActivity extends Activity
+public class MainActivity extends ListActivity
 {
 	private File curDir;
 	private FileArrayAdapter adapter;
@@ -33,7 +36,7 @@ public class MainActivity extends Activity
 				if (ff.isDirectory()) {
 					dir.add(new Option(ff.getName(), "Folder", ff.getAbsolutePath()));
 				} else {
-					fls.add(new Option(ff.getName(), "File Size: " + ff.length(), ff.getAbsolutePath()));
+					files.add(new Option(ff.getName(), "File Size: " + ff.length(), ff.getAbsolutePath()));
 				}
 			}
 		} catch(Exception e) {
@@ -47,7 +50,7 @@ public class MainActivity extends Activity
 		if (!f.getName().equalsIgnoreCase("sdcard")) {
 			dir.add(0, new Option("...", "Parent Directory", f.getParent()));
 		}
-		adapter = new FileArrayAdpater(FileChooser.this, R.layout.file_view, dir);
+		adapter = new FileArrayAdapter(MainActivity.this, R.layout.file_view, dir);
 		this.setListAdapter(adapter);
 	}
 }
