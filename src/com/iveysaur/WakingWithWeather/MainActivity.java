@@ -21,7 +21,7 @@ public class MainActivity extends ListActivity
     {
         super.onCreate(savedInstanceState);
 		curDir = new File("/sdcard/");
-        setContentView(R.layout.main);
+		files(curDir);
     }
 
 	private void files(File f) {
@@ -55,8 +55,8 @@ public class MainActivity extends ListActivity
 	}
 
 	@Override
-	protected void onListItemClick(ListView 1, View v, int position, long id) {
-		super.onListItemClick(1, v, position, id);
+	protected void onListItemClick(ListView l, View v, int position, long id) {
+		super.onListItemClick(l, v, position, id);
 		Option o = adapter.getItem(position);
 
 		if (o.getData().equalsIgnoreCase("folder") || o.getData().equalsIgnoreCase("parent directory")) {
