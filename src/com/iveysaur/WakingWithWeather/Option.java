@@ -1,3 +1,5 @@
+package com.iveysaur.WakingWithWeather;
+
 public class Option implements Comparable<Option> {
 	private String name;
 	private String data;
