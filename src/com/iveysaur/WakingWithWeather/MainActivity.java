@@ -11,6 +11,8 @@ import android.os.Bundle;
 public class MainActivity extends Activity
 {
 	private File curDir;
+	private FileArrayAdapter adapter;
+
     @Override
     public void onCreate(Bundle savedInstanceState)
     {
@@ -45,5 +47,7 @@ public class MainActivity extends Activity
 		if (!f.getName().equalsIgnoreCase("sdcard")) {
 			dir.add(0, new Option("...", "Parent Directory", f.getParent()));
 		}
+		adapter = new FileArrayAdpater(FileChooser.this, R.layout.file_view, dir);
+		this.setListAdapter(adapter);
 	}
 }
