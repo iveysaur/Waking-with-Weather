@@ -5,11 +5,15 @@ import android.os.Bundle;
 
 public class MainActivity extends Activity
 {
-    /** Called when the activity is first created. */
+	private File curDir;
     @Override
     public void onCreate(Bundle savedInstanceState)
     {
         super.onCreate(savedInstanceState);
+		curDir = new File("/sdcard/");
         setContentView(R.layout.main);
     }
+
+	private void files(File f) {
+	}
 }
