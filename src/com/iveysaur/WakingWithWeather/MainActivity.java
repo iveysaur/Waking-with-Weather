@@ -62,6 +62,12 @@ public class MainActivity extends ListActivity
 		if (o.getData().equalsIgnoreCase("folder") || o.getData().equalsIgnoreCase("parent directory")) {
 			curDir = new File(o.getPath());
 			files(curDir);
+		} else {
+			onFileClick(o);
 		}
+	}
+
+	private void onFileClick(Option o) {
+		Toast.makeText(this, "File Clicked: " + o.getName(), Toast.LENGTH_SHORT).show();
 	}
 }
