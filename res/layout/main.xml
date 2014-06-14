@@ -14,11 +14,23 @@
     android:layout_height="wrap_content"
     android:text="Alarms"
     />
-<Button
-	android:layout_width="wrap_content"
-	android:layout_height="wrap_content"
-	android:text="Choose Sound"
-	/>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    >
+	<TextView android:id="@+id/file_choose"
+		android:layout_weight="1"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:text="File Here"
+		/>
+	<Button android:id="@+id/file_chooser"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:text="Choose Sound"
+		/>
+</LinearLayout>
 <TextView
     android:layout_width="fill_parent"
     android:layout_height="wrap_content"
