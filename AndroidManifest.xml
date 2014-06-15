@@ -5,11 +5,17 @@
       android:versionName="1.0">
     <application android:label="Waking with Weather" android:icon="@drawable/ic_launcher">
         <activity android:name="MainActivity"
-                  android:label="Waking with Weather">
+			android:label="Waking with Weather"
+			>
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+        </activity>
+        <activity android:name=".FileChooser"
+			android:label="File Chooser"
+			android:parentActivityName=".MainActivity"
+			>
         </activity>
     </application>
 	<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"></uses-permission>

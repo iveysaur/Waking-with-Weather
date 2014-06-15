@@ -1,6 +1,7 @@
 package com.iveysaur.WakingWithWeather;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 
@@ -14,7 +15,9 @@ public class MainActivity extends Activity
 		setContentView(R.layout.main);
 	}
 
-	public void fileChoose(View v) {
-		setContentView(R.layout.file_view);
+	public void fileChooser(View v) {
+		Intent i = new Intent(this,
+				FileChooser.class);
+		startActivity(i);
 	}
 }
