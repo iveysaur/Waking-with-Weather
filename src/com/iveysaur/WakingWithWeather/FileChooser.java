@@ -71,6 +71,7 @@ public class FileChooser extends ListActivity
 	private void onFileClick(Option o) {
 		Intent i = new Intent(this,
 				MainActivity.class);
+		i.putExtra("file", o.getName());
 		startActivity(i);
 	}
 }
