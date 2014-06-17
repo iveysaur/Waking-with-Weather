@@ -10,6 +10,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.ListView;
 import android.widget.Toast;
+import android.content.Intent;
 
 public class FileChooser extends ListActivity
 {
@@ -68,6 +69,8 @@ public class FileChooser extends ListActivity
 	}
 
 	private void onFileClick(Option o) {
-		Toast.makeText(this, "File Clicked: " + o.getName(), Toast.LENGTH_SHORT).show();
+		Intent i = new Intent(this,
+				MainActivity.class);
+		startActivity(i);
 	}
 }
