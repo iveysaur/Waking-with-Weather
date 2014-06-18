@@ -14,20 +14,22 @@ public class MainActivity extends Activity
 	{
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.main);
-
-		TextView fileName = (TextView)findViewById(R.id.file_choose);
-		Intent i2 = getIntent();
-		Bundle b = i2.getExtras();
-
-		if (b != null) {
-			String name = (String) b.get("file");
-			fileName.setText(name);
-		}
 	}
 
 	public void fileChooser(View v) {
 		Intent i = new Intent(this,
 				FileChooser.class);
-		startActivity(i);
+		startActivityForResult(i, 1);
+	}
+
+	@Override
+	protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+		TextView fileName = (TextView)findViewById(R.id.file_choose);
+		Bundle b = data.getExtras();
+
+		if (b != null) {
+			String name = (String) b.get("file");
+			fileName.setText(name);
+		}
 	}
 }
