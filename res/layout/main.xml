@@ -9,11 +9,23 @@
     android:layout_height="wrap_content"
     android:text="Welcome to Waking with Weather"
     />
-<TextView
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
     android:layout_width="fill_parent"
     android:layout_height="wrap_content"
-    android:text="Alarms"
-    />
+    >
+	<TextView
+		android:layout_weight="1"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:text="Alarms"
+		/>
+	<Button android:id="@+id/new_alarm"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:text="Add New Alarm"
+		/>
+</LinearLayout>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="horizontal"
     android:layout_width="fill_parent"
