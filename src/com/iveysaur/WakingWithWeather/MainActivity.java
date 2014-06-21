@@ -24,7 +24,7 @@ public class MainActivity extends Activity
 
 	@Override
 	protected void onActivityResult(int requestCode, int resultCode, Intent data) {
-		TextView fileName = (TextView)findViewById(R.id.file_choose);
+		TextView fileName = (TextView)findViewById(R.id.file_choose_text);
 		Bundle b = data.getExtras();
 
 		if (b != null) {
