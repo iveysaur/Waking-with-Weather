@@ -21,6 +21,7 @@ public class FileChooser extends ListActivity
     public void onCreate(Bundle savedInstanceState)
     {
         super.onCreate(savedInstanceState);
+		setContentView(R.layout.file_view);
 		curDir = new File("/sdcard/");
 		files(curDir);
     }
