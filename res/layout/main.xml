@@ -20,10 +20,11 @@
 		android:layout_height="wrap_content"
 		android:text="Alarms"
 		/>
-	<Button android:id="@+id/new_alarm"
+	<Button android:id="@+id/all_alarms"
 		android:layout_width="wrap_content"
 		android:layout_height="wrap_content"
-		android:text="Add New Alarm"
+		android:text="Alarms"
+		android:onClick="allAlarms"
 		/>
 </LinearLayout>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"

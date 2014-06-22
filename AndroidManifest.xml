@@ -17,6 +17,11 @@
 			android:parentActivityName=".MainActivity"
 			>
         </activity>
+        <activity android:name=".AllAlarms"
+			android:label="All Alarms"
+			android:parentActivityName=".MainActivity"
+			>
+        </activity>
     </application>
 	<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"></uses-permission>
 </manifest>

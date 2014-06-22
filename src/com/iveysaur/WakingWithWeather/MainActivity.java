@@ -22,6 +22,12 @@ public class MainActivity extends Activity
 		startActivityForResult(i, 1);
 	}
 
+	public void allAlarms(View v) {
+		Intent i = new Intent(this,
+				AllAlarms.class);
+		startActivity(i);
+	}
+
 	@Override
 	protected void onActivityResult(int requestCode, int resultCode, Intent data) {
 		TextView fileName = (TextView)findViewById(R.id.file_choose_text);
