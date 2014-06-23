@@ -43,7 +43,7 @@ public class FileArrayAdapter extends ArrayAdapter<Option> {
 				t1.setText(o.getName());
 			}
 			if (t2 != null) {
-				t2.setText(o.getName());
+				t2.setText(o.getData());
 			}
 		}
 		return v;
