@@ -31,7 +31,9 @@ public class FileArrayAdapter extends ArrayAdapter<Option> {
 		View v = convertView;
 		if (v == null) {
 			LayoutInflater vi = (LayoutInflater) c.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-			v = vi.inflate(id, null);
+			v = vi.inflate(id, parent, false);
+			v.setPadding(5, -20, 0, 5);
+			v.setVisibility(View.VISIBLE);
 		}
 
 		final Option o = items.get(position);
